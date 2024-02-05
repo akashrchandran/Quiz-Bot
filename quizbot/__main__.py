@@ -26,7 +26,16 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def generate_mcq(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Generating mcq questions...")
     questions = mcq.generate_mcq_questions(update.message.text, 5)
-    print(questions)
+    for question in questions:
+        await context.bot.send_poll(
+            update.effective_chat.id,
+            question.questionText,
+            type="quiz",
+            options= question.distractors + [question.answerText],
+            correct_option_id= len(question.distractors) - 1,
+            is_anonymous=False,
+            allows_multiple_answers=False,
+        )
 
 
 
