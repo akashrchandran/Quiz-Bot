@@ -25,7 +25,7 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def generate_mcq(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Generating mcq questions...")
-    questions = mcq.generate_mcq_questions(update.message.text, 3)
+    questions = mcq.generate_mcq_questions(update.message.text, 5)
     print(questions)
 
 
