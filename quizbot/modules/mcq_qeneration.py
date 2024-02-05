@@ -1,7 +1,7 @@
 from typing import List
 from nltk.tokenize import sent_tokenize
 import toolz
-
+import numpy as np
 from quizbot.helper.duplicate_removal import remove_distractors_duplicate_with_correct_answer, remove_duplicates
 from quizbot.helper.text_cleaning import clean_text
 from quizbot.ml_models.distractor_generation.distractor_generator import DistractorGenerator
@@ -42,6 +42,9 @@ class MCQGenerator():
             print(question.answerText)
             print(question.questionText)
             print(question.distractors)
+            question.options = question.distractors + [question.answerText]
+            np.random.shuffle(question.options)
+            question.ansindex = question.options.index(question.answerText)
 
         return questions
 

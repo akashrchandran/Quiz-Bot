@@ -31,8 +31,8 @@ async def generate_mcq(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
             update.effective_chat.id,
             question.questionText,
             type="quiz",
-            options= question.distractors + [question.answerText],
-            correct_option_id= len(question.distractors) - 1,
+            options= question.options,
+            correct_option_id= question.ansindex,
             is_anonymous=False,
             allows_multiple_answers=False,
         )
