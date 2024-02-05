@@ -12,6 +12,7 @@ class FilesDownloder:
         self.distractor_model_path = "quizbot/ml_models/distractor_generation/models/race-distractors.ckpt"
         self.download_qa_model()
         self.download_sense2vec_model()
+        self.download_distractor_model()
 
     def download_qa_model(self):
         if not os.path.exists(self.qa_model_path):
