@@ -1,0 +1,9 @@
+python-telegram-bot[webhooks]
+python-dotenv
+requests
+gdown
+nltk==3.6.3
+toolz==0.11.1
+pytorch-lightning==1.9.5
+transformers==4.28.1
+sense2vec==2.0.0
