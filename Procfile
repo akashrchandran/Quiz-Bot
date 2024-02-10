@@ -1,1 +1,1 @@
-web: pyhton3 -m quizbot
+web: python3 -m quizbot
