@@ -47,17 +47,8 @@ def main() -> None:
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, generate_mcq))
 
     application.add_error_handler(error_handler)
-
-    if ENVIRONMENT:
-        logger.info("Running in dev -- using polling")
-        application.run_polling(allowed_updates=Update.ALL_TYPES)
-    else:
-        logger.info("Running in prod -- using webhooks")
-        application.run_webhook(
-            listen="0.0.0.0",
-            port=PORT,
-            webhook_url="https://ktulivetrackerbot-akashrchandran.koyeb.app/",
-        )
+    logger.info("Running in dev -- using polling")
+    application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
 if __name__ == "__main__":

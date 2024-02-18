@@ -1,5 +1,5 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-python-telegram-bot[webhooks]
+python-telegram-bot
 python-dotenv
 requests
 gdown
