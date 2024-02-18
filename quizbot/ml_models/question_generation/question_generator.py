@@ -1,15 +1,9 @@
-from logging import NullHandler
-from typing import List, Dict, Tuple
+from typing import Tuple
 import tqdm.notebook as tq
 from tqdm.notebook import tqdm
 # import pandas as pd
 # import numpy as np
-
-import torch
-from pathlib import Path
-from torch.utils.data import Dataset, DataLoader
 import pytorch_lightning as pl
-from pytorch_lightning.callbacks import ModelCheckpoint
 from transformers import (
     AdamW,
     T5ForConditionalGeneration,
