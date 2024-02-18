@@ -5,7 +5,7 @@ requests
 gdown
 nltk==3.6.3
 toolz==0.11.1
-lightning-app==1.9.5
+pytorch_lightning==1.9.5
 transformers==4.28.1
 sense2vec==2.0.0
 torch==2.2.0+cpu
