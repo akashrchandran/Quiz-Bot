@@ -8,5 +8,5 @@ The koala feeds very selectively on the leaves of certain eucalyptus trees. Gene
 from quizbot.ml_models.sense2vec_distractor_generation.sense2vec_generation import Sense2VecDistractorGeneration
 
 sense2vec_distractor_generator = Sense2VecDistractorGeneration()
-distractors = sense2vec_distractor_generator.generate("symbiotic_bacteria", 3)
+distractors = sense2vec_distractor_generator.generate("batsman", (10))
 print(distractors)
